@@ -58,7 +58,7 @@ cc.Class({
         //initialize timer
         this.timer = 0;
         this.starDuration = 0;
-            this.score = 0;
+        this.score = 0;
 
           // obtain the anchor point of ground level on the y axis
           this.groundY = this.ground.y + this.ground.height/2;   // this.ground.top may also work

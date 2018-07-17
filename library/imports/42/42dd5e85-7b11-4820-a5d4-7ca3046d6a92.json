@@ -45,8 +45,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 60,
-      "height": 66
+      "width": 10,
+      "height": 10
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -76,7 +76,7 @@
       "__uuid__": "8f8ba54f-70f6-4ca1-86d9-dddbd85e769d"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -98,7 +98,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "pickRadius": 60
+    "pickRadius": 10
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -106,7 +106,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "42dd5e85-7b11-4820-a5d4-7ca3046d6a92"
     },
     "fileId": "455wGng1VMPaqNw0IheUdW",
     "sync": false
