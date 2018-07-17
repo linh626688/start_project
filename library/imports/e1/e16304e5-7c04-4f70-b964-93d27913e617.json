@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Xitem",
+    "texture": "89be4fa6-4313-4ab5-a441-3fed365299e7",
+    "atlas": "",
+    "rect": [
+      1,
+      5,
+      127,
+      117
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      128,
+      128
+    ]
+  }
+}
