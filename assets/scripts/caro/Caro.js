@@ -33,9 +33,6 @@ cc.Class({
         // },
     },
     spawnNew: function(){
-        // var arr = [];
-        // this.node.addChild(spawn1);
-        // this.node.addChild(spawn2);  
        var x =0;
        var y = 0;
         for(  i=-7; i< 8 ; i++){

@@ -734,3 +734,4 @@
 2018-07-17T10:21:08.494Z - normal: Simulator: After first cleanup, dragonbones object remained count: 0
 2018-07-17T10:21:08.495Z - normal: Simulator: After second cleanup, dragonbones object remained count: 0
 2018-07-17T10:21:08.495Z - normal: Simulator: ScriptEngine::cleanup end ...
+2018-07-17T10:38:46.987Z - info: shutdown preview server
