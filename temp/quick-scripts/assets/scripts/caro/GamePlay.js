@@ -12,10 +12,7 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
-        table: {
-            default: [],
-            type: cc.Prefab
-        }
+        table: cc.Node
     },
     spawnNew: function spawnNew() {
 
@@ -28,10 +25,10 @@ cc.Class({
                 this.node.addChild(spawn);
                 spawn.getComponent('Block').row = a;
                 spawn.getComponent('Block').col = i;
-                x = a * spawn.width / 2.5;
-                y = i * spawn.height / 3;
+                x = a * spawn.width;
+                y = i * spawn.height;
                 spawn.setPosition(this.getNewBlockPosition(x, y));
-                this.table.push(spawn);
+                // this.table.push(spawn);
                 spawn.getComponent('Block').GamePlay = this;
             }
         }
@@ -40,12 +37,36 @@ cc.Class({
 
         return cc.p(randX, randY);
     },
+    addTouchListerner: function addTouchListerner() {
+        this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+            var rect = this.table.getBoundingBoxToWorld();
+            if (cc.rectContainsPoint(rect, event.getLocation())) {
+                var star = cc.instantiate(this.blockPrefab);
+                star.setPosition(cc.v2(event.getLocation().x - 480, event.getLocation().y - 320));
+                this.node.addChild(star);
 
+                // let allChildren = this.table.getChildren();                        
+                // cc.log(rect);
+                // let ls
+                // for(let i = 0; i < allChildren.length; i++){
+                //     let rect = allChildren[i].getBoundingBoxToWorld();    
+                //     if (cc.rectContainsPoint(rect, event.getLocation())) {
+                //         cc.log(allChildren[i].getName());
+                //         return true;
+                // }
+            }
+        }, this);
+    },
     onLoad: function onLoad() {
         // this.table = 
-        this.spawnNew();
+        // console.log("vao day");
+        // this.spawnNew();
+        // this.registerInput();
+        this.addTouchListerner();
     },
-    start: function start() {}
+    start: function start() {
+        // this.addTouchList)erner();
+    }
 }
 
 // update (dt) {},

@@ -18,7 +18,9 @@ cc.Class({
 
     // onLoad () {},
 
-    start: function start() {}
+    start: function start() {
+        // this.onClickBlock();
+    }
 }
 
 // update (dt) {},
