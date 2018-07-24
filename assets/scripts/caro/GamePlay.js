@@ -8,7 +8,8 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
-        table: cc.Node,
+        table_1: cc.Node,
+        table_2: cc.Node,
     },
     spawnNew: function () {
 
@@ -36,9 +37,9 @@ cc.Class({
         return cc.p(randX, randY);
 
     },
-    addTouchListerner() {
+    addTouchListernerTable(table) {
         this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-            let rect = this.table.getBoundingBoxToWorld();
+            let rect = table.getBoundingBoxToWorld();
             if (cc.rectContainsPoint(rect, event.getLocation())) {
                 let star = cc.instantiate(this.blockPrefab);
                 star.setPosition(cc.v2(event.getLocation().x - 480, event.getLocation().y - 320));
@@ -58,11 +59,9 @@ cc.Class({
         }, this);
     },
     onLoad() {
-        // this.table = 
-        // console.log("vao day");
-        // this.spawnNew();
-        // this.registerInput();
-        this.addTouchListerner();
+        this.addTouchListernerTable(this.table_1);
+
+        this.addTouchListernerTable(this.table_2);
     },
 
     start() {
